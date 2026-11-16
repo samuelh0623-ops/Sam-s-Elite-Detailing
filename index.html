@@ -16,13 +16,11 @@
     <meta property="og:description" content="Mobile-only car detailing serving Wesley Chapel, Zephyrhills, Dade City, Land O' Lakes, and Tampa and surrounding areas. Full details, interior deep cleaning, and exterior wash &amp; wax.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_US">
-    <meta property="og:image" content="logo.png">
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Mobile Car Detailing Wesley Chapel, FL | Sam's Elite Detailing">
     <meta name="twitter:description" content="Mobile-only car detailing serving Wesley Chapel, Zephyrhills, Dade City, Land O' Lakes, and Tampa and surrounding areas. Full details, interior deep cleaning, and exterior wash & wax.">
-    <meta name="twitter:image" content="logo.png">
     
     <!-- Browser Tab Favicon (FontAwesome Car Icon) -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='%23dc2626' d='M135.2 117.4L109.1 192H402.9l-26.1-74.6C372.3 104.6 360.2 96 346.6 96H165.4c-13.6 0-25.7 8.6-30.2 21.4zM39.6 196.8L74.8 96.3C88.3 57.8 124.6 32 165.4 32H346.6c40.8 0 77.1 25.8 90.6 64.3l35.2 100.5c23.2 9.6 39.6 32.5 39.6 59.2V400c0 26.5-21.5 48-48 48H432c-26.5 0-48-21.5-48-48V384H128v16c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V256c0-26.7 16.4-49.6 39.6-59.2zM128 288a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm288 32a32 32 0 1 0 0-64 32 32 0 1 0 0 64z'/></svg>" type="image/svg+xml">
@@ -43,7 +41,6 @@
       "@id": "https://www.samselitedetailing.com/#business",
       "name": "Sam's Elite Detailing",
       "url": "https://www.samselitedetailing.com/",
-      "image": "https://www.samselitedetailing.com/7.png",
       "telephone": "+1-813-602-3623",
       "email": "Samuelh0623@gmail.com",
       "description": "Mobile-only car detailing serving Wesley Chapel, Zephyrhills, Dade City, Land O' Lakes, and Tampa and surrounding areas. Services include full vehicle detailing, interior deep cleaning, exterior wash and wax, and detailing add-ons.",
@@ -335,8 +332,7 @@
             background-color: var(--bg-root);
             background-image: 
                 linear-gradient(180deg, rgba(9,9,11,0.65) 0%, rgba(9,9,11,0.85) 60%, var(--bg-root) 100%),
-                radial-gradient(circle at 80% 20%, rgba(220, 38, 38, 0.12) 0%, transparent 40%),
-                url('7.png');
+                radial-gradient(circle at 80% 20%, rgba(220, 38, 38, 0.12) 0%, transparent 40%);
             background-size: cover;
             background-position: center;
         }
@@ -592,90 +588,6 @@
             font-size: 0.9rem;
         }
 
-        /* Gallery Portfolio */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1rem;
-        }
-        .gallery-item {
-            position: relative;
-            width: 100%;
-            aspect-ratio: 1 / 1;
-            border-radius: var(--radius-md);
-            overflow: hidden;
-            border: 1px solid var(--border-subtle);
-            background-color: var(--bg-surface);
-            cursor: pointer;
-        }
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .gallery-item:hover img { transform: scale(1.05); }
-        .gallery-overlay {
-            position: absolute;
-            inset: 0;
-            background: rgba(9, 9, 11, 0.6);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: opacity 0.25s ease;
-        }
-        .gallery-item:hover .gallery-overlay { opacity: 1; }
-        .gallery-overlay i {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            background: rgba(220, 38, 38, 0.9);
-            color: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.1rem;
-        }
-
-        /* Lightbox Modal */
-        .lightbox-modal {
-            position: fixed;
-            inset: 0;
-            background-color: rgba(9, 9, 11, 0.95);
-            backdrop-filter: blur(12px);
-            z-index: 2000;
-            display: none;
-            align-items: center;
-            justify-content: center;
-            padding: 2rem;
-        }
-        .lightbox-modal.active { display: flex; }
-        .lightbox-content {
-            position: relative;
-            max-width: 900px;
-            max-height: 85vh;
-        }
-        .lightbox-content img {
-            max-width: 100%;
-            max-height: 85vh;
-            border-radius: var(--radius-sm);
-            border: 1px solid var(--border-strong);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
-        }
-        .lightbox-close {
-            position: absolute;
-            top: -45px;
-            right: 0;
-            background: none;
-            border: none;
-            color: var(--text-secondary);
-            font-size: 2.2rem;
-            cursor: pointer;
-            transition: color 0.2s;
-        }
-        .lightbox-close:hover { color: var(--text-primary); }
-
         /* Reviews */
         .reviews-section {
             background-color: var(--bg-surface);
@@ -905,7 +817,6 @@
 
         /* Responsive Breakpoints */
         @media (min-width: 600px) {
-            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
             .hero-buttons { 
                 flex-direction: row; 
                 align-items: center;
@@ -919,7 +830,6 @@
             .info-grid { grid-template-columns: repeat(3, 1fr); }
             .services-grid { grid-template-columns: repeat(2, 1fr); }
             .addons-grid { grid-template-columns: repeat(2, 1fr); }
-            .gallery-grid { grid-template-columns: repeat(3, 1fr); }
             .reviews-grid { grid-template-columns: repeat(2, 1fr); }
             .split-section { grid-template-columns: 1fr 1fr; }
             .contact-grid { grid-template-columns: 1fr 1fr; }
@@ -949,9 +859,6 @@
     <header class="navbar">
         <div class="container">
             <a href="#home" class="navbar-brand" aria-label="Home">
-                <div class="logo-container">
-                    <img src="logo.png" alt="Sam's Elite Detailing mobile car detailing logo">
-                </div>
                 <span class="logo-text">Sam's Elite Detailing</span>
             </a>
             
@@ -959,7 +866,6 @@
                 <a href="#services">Services</a>
                 <a href="#addons">Add-Ons</a>
                 <a href="#about">About</a>
-                <a href="#gallery">Gallery</a>
                 <a href="#reviews">Reviews</a>
             </nav>
 
@@ -987,7 +893,6 @@
         <a href="#services" class="mobile-link">Services</a>
         <a href="#addons" class="mobile-link">Add-Ons</a>
         <a href="#about" class="mobile-link">About</a>
-        <a href="#gallery" class="mobile-link">Gallery</a>
         <a href="#reviews" class="mobile-link">Reviews</a>
         <a href="#contact" class="mobile-link">Contact</a>
         <a href="tel:+18136023623" class="btn btn-primary btn-block" style="margin-top: 0.5rem;"><i class="fa-solid fa-phone"></i> (813) 602-3623</a>
@@ -1133,10 +1038,6 @@
         <section class="section-padding" id="about">
             <div class="container">
                 <div class="split-section">
-                    <div class="about-image-wrapper">
-                        <img src="8.png" alt="Professional car detailing results by Sam's Elite Detailing in Wesley Chapel, Florida" loading="lazy">
-                    </div>
-
                     <div class="split-content">
                         <h2 class="section-title" style="text-align: left;">Professional Quality, Guaranteed</h2>
                         <p>Sam's Elite Detailing is a mobile-only car detailing service. We come to your home or workplace, serving Wesley Chapel, Zephyrhills, Dade City, Land O' Lakes, and Tampa and surrounding areas.</p>
@@ -1167,51 +1068,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- Gallery Section -->
-        <section class="section-padding" id="gallery" style="background-color: var(--bg-surface); border-top: 1px solid var(--border-subtle);">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Work Portfolio</h2>
-                    <p class="section-subtitle">Click any photo to expand and view our professional detailing results.</p>
-                </div>
-
-                <div class="gallery-grid">
-                    <div class="gallery-item" data-img="1.png">
-                        <img src="1.png" width="400" height="400" alt="Interior and exterior car detailing results by Sam's Elite Detailing" loading="lazy">
-                        <div class="gallery-overlay"><i class="fa-solid fa-expand"></i></div>
-                    </div>
-                    <div class="gallery-item" data-img="2.png">
-                        <img src="2.png" width="400" height="400" alt="Clean vehicle interior after a professional detail in Wesley Chapel, Florida" loading="lazy">
-                        <div class="gallery-overlay"><i class="fa-solid fa-expand"></i></div>
-                    </div>
-                    <div class="gallery-item" data-img="3.png">
-                        <img src="3.png" width="400" height="400" alt="Car detailing work completed by Sam's Elite Detailing near Tampa, Florida" loading="lazy">
-                        <div class="gallery-overlay"><i class="fa-solid fa-expand"></i></div>
-                    </div>
-                    <div class="gallery-item" data-img="4.png">
-                        <img src="4.png" width="400" height="400" alt="Professional exterior car wash and detailing results" loading="lazy">
-                        <div class="gallery-overlay"><i class="fa-solid fa-expand"></i></div>
-                    </div>
-                    <div class="gallery-item" data-img="5.png">
-                        <img src="5.png" width="400" height="400" alt="Vehicle interior deep cleaning by Sam's Elite Detailing" loading="lazy">
-                        <div class="gallery-overlay"><i class="fa-solid fa-expand"></i></div>
-                    </div>
-                    <div class="gallery-item" data-img="6.png">
-                        <img src="6.png" width="400" height="400" alt="Finished car detailing service in Wesley Chapel and Tampa, Florida" loading="lazy">
-                        <div class="gallery-overlay"><i class="fa-solid fa-expand"></i></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Lightbox Modal Container -->
-        <div class="lightbox-modal" id="lightboxModal" aria-hidden="true" role="dialog" aria-label="Expanded photo view">
-            <div class="lightbox-content">
-                <button class="lightbox-close" id="lightboxClose" aria-label="Close photo view">&times;</button>
-                <img id="lightboxImg" src="" alt="Expanded photo of Sam's Elite Detailing work">
-            </div>
-        </div>
 
         <!-- Reviews Section -->
         <section class="section-padding reviews-section" id="reviews">
@@ -1462,40 +1318,6 @@
                     if (icon) {
                         icon.style.transform = 'rotate(0deg)';
                     }
-                }
-            });
-        }
-
-        // Click-to-Expand Lightbox Logic
-        const lightboxModal = document.getElementById('lightboxModal');
-        const lightboxImg = document.getElementById('lightboxImg');
-        const lightboxClose = document.getElementById('lightboxClose');
-
-        document.querySelectorAll('.gallery-item').forEach(item => {
-            item.addEventListener('click', () => {
-                const imageSrc = item.getAttribute('data-img') || item.querySelector('img').src;
-                lightboxImg.src = imageSrc;
-                lightboxModal.classList.add('active');
-                lightboxModal.setAttribute('aria-hidden', 'false');
-            });
-        });
-
-        const closeLightbox = () => {
-            lightboxModal.classList.remove('active');
-            lightboxModal.setAttribute('aria-hidden', 'true');
-            lightboxImg.src = '';
-        };
-
-        if (lightboxClose && lightboxModal) {
-            lightboxClose.addEventListener('click', closeLightbox);
-            lightboxModal.addEventListener('click', (e) => {
-                if (e.target === lightboxModal) {
-                    closeLightbox();
-                }
-            });
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape' && lightboxModal.classList.contains('active')) {
-                    closeLightbox();
                 }
             });
         }
